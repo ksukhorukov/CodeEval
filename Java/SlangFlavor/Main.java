@@ -20,11 +20,11 @@ public class Main {
 			". Awesome!"
 		};
 
+		Boolean insertion = false;
+		Integer curr_slang = 0;
+		String slang_word = "";
+			
 		while((line = buffer.readLine()) != null) {
-
-			Boolean insertion = false;
-			Integer curr_slang = 0;
-			String slang_word = "";
 
 			for (char chr : line.toCharArray()) {
 				if (!(chr == '.' || chr == '!' || chr == '?')) {
@@ -40,7 +40,7 @@ public class Main {
 				}
 			}
 			System.out.println();
-			
+
 		}
 	}
 }
