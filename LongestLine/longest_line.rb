@@ -1,7 +1,5 @@
 #!/usr/bin/env ruby
 
-require 'pp'
-
 result = []
 myFile = File.open(ARGV[0])
 limit = myFile.gets.to_i
