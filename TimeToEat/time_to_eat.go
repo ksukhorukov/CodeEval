@@ -25,7 +25,11 @@ func intToTime(time int) (string) {
 
     //time should consists of 6 digits
     if len(number) != 6 {
-        formated = "0" + number
+        padding := 6 - len(number)
+        for i := 0; i < padding; i++ {
+          formated += "0" 
+        }
+        formated += number
     } else {
         formated = number
     }
@@ -61,7 +65,7 @@ func main() {
         sort.Ints(ints)
         //transform an array of ints to time format
         var result = make([]string, len(stamps))
-        for i := len(ints)-1; i >= 0; i-- {
+        for i := (len(ints)-1); i >= 0; i-- {
             result[i] = intToTime(ints[i])
             fmt.Print(result[i], " ")
         }
